@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.header {
+  background-image: url(../images/bg-mobile.svg), linear-gradient(hsl(257, 40%, 49%), hsl(257, 40%, 49%));
+  background-repeat: no-repeat;
+  padding: 3rem 3.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 5.5rem;
+}
+.header--logobox-logo {
+  height: 3.2rem;
+}
+
+.header--imgbox-img {
+  width: 100%;
+}
+
+.header--textbox {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+.header--textbox-heading {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.header--textbox-text {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2.5rem;
+}
+.header--textbox-btn:link, .header--textbox-btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(257, 40%, 49%);
+  width: 70%;
+  padding: 1rem;
+  border-radius: 100px;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+.header--textbox-btn:hover, .header--textbox-btn:active {
+  background-color: hsl(300, 69%, 71%);
+}
+
+.header--iconbox {
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.header--iconbox-icon:link, .header--iconbox-icon:visited {
+  display: inline-block;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  transition: border-color 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header--iconbox-icon:link svg[class^=icon], .header--iconbox-icon:visited svg[class^=icon] {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: hsl(0, 0%, 100%);
+  transition: fill 0.3s ease-in-out;
+}
+.header--iconbox-icon:hover, .header--iconbox-icon:active {
+  border-color: hsl(300, 69%, 71%);
+}
+.header--iconbox-icon:hover svg[class^=icon] {
+  fill: hsl(300, 69%, 71%);
+}
+
+/*# sourceMappingURL=style.css.map */
