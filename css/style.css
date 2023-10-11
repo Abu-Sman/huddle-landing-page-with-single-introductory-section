@@ -21,10 +21,30 @@ body {
   grid-template-columns: 1fr;
   row-gap: 5.5rem;
 }
+@media screen and (min-width: 90em) {
+  .header {
+    background-image: url(../images/bg-desktop.svg), linear-gradient(hsl(257, 40%, 49%), hsl(257, 40%, 49%));
+    background-repeat: no-repeat;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 90em) {
+  .header--logobox {
+    grid-row: 1/2;
+    grid-column: 1/span 2;
+  }
+}
 .header--logobox-logo {
   height: 3.2rem;
 }
 
+@media screen and (min-width: 90em) {
+  .header--imgbox {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+}
 .header--imgbox-img {
   width: 100%;
 }
@@ -34,6 +54,12 @@ body {
   font-size: 1.6rem;
   text-align: center;
   color: hsl(0, 0%, 100%);
+}
+@media screen and (min-width: 90em) {
+  .header--textbox {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
 }
 .header--textbox-heading {
   font-size: 2.6rem;
@@ -67,6 +93,12 @@ body {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+}
+@media screen and (min-width: 90em) {
+  .header--iconbox {
+    grid-row: 3/4;
+    grid-column: 1/span 2;
+  }
 }
 .header--iconbox-icon:link, .header--iconbox-icon:visited {
   display: inline-block;

@@ -50,12 +50,19 @@ body {
   row-gap: 5.5rem;
 
   @include laptops() {
+    background-image: url(../images/bg-desktop.svg),
+      linear-gradient($color-primary, $color-primary);
+    background-repeat: no-repeat;
+
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 // LOGO-BOX STYLES
 .header--logobox {
   @include laptops() {
+    grid-row: 1 / 2;
+    grid-column: 1 / span 2;
   }
 
   &-logo {
@@ -66,6 +73,8 @@ body {
 // IMG STYLES
 .header--imgbox {
   @include laptops() {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
   }
 
   &-img {
@@ -81,6 +90,8 @@ body {
   color: $color-white;
 
   @include laptops() {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
   }
 
   &-heading {
@@ -134,6 +145,8 @@ body {
   gap: 1.5rem;
 
   @include laptops() {
+    grid-row: 3 / 4;
+    grid-column: 1 / span 2;
   }
 
   &-icon:link,
