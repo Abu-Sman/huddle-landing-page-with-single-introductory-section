@@ -7,25 +7,42 @@
 html {
   font-size: 62.5%;
 }
+@media screen and (min-width: 90em) {
+  html {
+    font-size: 70%;
+  }
+}
 
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
 }
 
+.container {
+  max-width: 100vw;
+  max-height: 80rem;
+  background-color: hsl(257, 40%, 49%);
+}
+
 .header {
   background-image: url(../images/bg-mobile.svg), linear-gradient(hsl(257, 40%, 49%), hsl(257, 40%, 49%));
   background-repeat: no-repeat;
   padding: 3rem 3.5rem;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 5.5rem;
 }
 @media screen and (min-width: 90em) {
   .header {
+    max-width: 130rem;
     background-image: url(../images/bg-desktop.svg), linear-gradient(hsl(257, 40%, 49%), hsl(257, 40%, 49%));
     background-repeat: no-repeat;
-    grid-template-columns: 1fr 1fr;
+    padding: 7rem;
+    padding-bottom: 3rem;
+    grid-template-columns: 1.3fr 1fr;
+    column-gap: 5rem;
+    row-gap: 2.5rem;
   }
 }
 
@@ -33,10 +50,16 @@ body {
   .header--logobox {
     grid-row: 1/2;
     grid-column: 1/span 2;
+    margin-bottom: 3rem;
   }
 }
 .header--logobox-logo {
   height: 3.2rem;
+}
+@media screen and (min-width: 90em) {
+  .header--logobox-logo {
+    height: 4.5rem;
+  }
 }
 
 @media screen and (min-width: 90em) {
@@ -59,6 +82,8 @@ body {
   .header--textbox {
     grid-row: 2/3;
     grid-column: 2/3;
+    text-align: left;
+    padding-top: 10%;
   }
 }
 .header--textbox-heading {
@@ -66,12 +91,23 @@ body {
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
+@media screen and (min-width: 90em) {
+  .header--textbox-heading {
+    font-size: 3.6rem;
+  }
+}
 .header--textbox-text {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.85);
   margin-bottom: 2.5rem;
+}
+@media screen and (min-width: 90em) {
+  .header--textbox-text {
+    font-size: 1.67rem;
+    line-height: 1.6;
+  }
 }
 .header--textbox-btn:link, .header--textbox-btn:visited {
   display: inline-block;
@@ -81,11 +117,18 @@ body {
   width: 70%;
   padding: 1rem;
   border-radius: 100px;
-  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (min-width: 90em) {
+  .header--textbox-btn:link, .header--textbox-btn:visited {
+    width: 35%;
+    text-align: center;
+  }
 }
 .header--textbox-btn:hover, .header--textbox-btn:active {
   background-color: hsl(300, 69%, 71%);
+  color: hsl(0, 0%, 100%);
 }
 
 .header--iconbox {
@@ -98,6 +141,7 @@ body {
   .header--iconbox {
     grid-row: 3/4;
     grid-column: 1/span 2;
+    justify-self: end;
   }
 }
 .header--iconbox-icon:link, .header--iconbox-icon:visited {
