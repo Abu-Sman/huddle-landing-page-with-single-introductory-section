@@ -23,6 +23,12 @@ body {
   max-height: 80rem;
   background-color: hsl(257, 40%, 49%);
 }
+@media screen and (min-width: 150em) {
+  .container {
+    max-width: 150rem;
+    margin: 10rem auto;
+  }
+}
 
 .header {
   background-image: url(../images/bg-mobile.svg), linear-gradient(hsl(257, 40%, 49%), hsl(257, 40%, 49%));
@@ -117,13 +123,14 @@ body {
   width: 70%;
   padding: 1rem;
   border-radius: 100px;
-  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
 }
 @media screen and (min-width: 90em) {
   .header--textbox-btn:link, .header--textbox-btn:visited {
     width: 35%;
     text-align: center;
+    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.5), 0 -0.2rem 0.3rem rgba(0, 0, 0, 0.5);
   }
 }
 .header--textbox-btn:hover, .header--textbox-btn:active {
